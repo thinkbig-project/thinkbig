@@ -6,11 +6,17 @@
 
 ---
 
-# Table of Contents
+## Table of Contents
+
 1. [About](#about)
 2. [Mockups](#mockups)
 3. [Onboarding](#onboarding)
-4. [Getting Started](#getting-started)
+4. [Branches and Commits](#branches-and-commits)
+5. [Issues](#issues)
+6. [Pull Requests](#pull-requests)
+7. [Getting Started](#getting-started)
+
+---
 
 ## About
 
@@ -39,20 +45,23 @@ Upon account creation, an account setup page will appear.
 
 Upon setup completion, the user is passed to the dashboard, where they will be able to create, read, update and delete their own help requests, or look through existing help requets from others.
 
-**Help request modal**
+##### Help request modal
+
 * Help requests will currently be made from within the app. (After the mvp is complete, we'll work with 100maintainers to see about integrating this into the existing help channels.)
 * The help requests will prompt the user in a way that creates a useful help ticket.
 * There will be tags that will dictate which inputs are displayed in the help ticket modal.
-* **Example:** The selected help request tags chosen are 'node.js' & 'looking-for-study-group'. The inputs might ask which class you're on and ask to confirm time blocks that you're available. 
+* **Example:** The selected help request tags chosen are 'node.js' & 'looking-for-study-group'. The inputs might ask which class you're on and ask to confirm time blocks that you're available.
 * **Example:** The selected help request tags chosen are 'assignment' 'stuck' 'node'. The inputs might ask the assignment number, a description of the current beahvior, a description of the expected behavior, a link to the repo, codepen, or markdown of the code in question.
 
-**Help request lists**
+##### Help request lists
 
 There will be two tabs. One for your requests, and one for everyone else's.
+
 * Your tab will show all of the active requests, who is currently helping you (if anyone), and who is available to help you, with links to reach out to each of them on Discord (NOBODY SHOULD BE ABLE TO COMMUNICATE DIRECTLY THROUGH THIS APP).
 * The other tab will show all of the open tickets where your availability and skills match. It will show who the contact is and whether or not they're online.
 
 ---
+
 ## Mockups
 
 _Word mark:_
@@ -83,9 +92,58 @@ We'll need to provide you with the `.env` variables for development. Those will 
 
 ---
 
+## Branches and Commits
+
+1. **The default branch is `dev`**
+`main` will be for production only, and will be directly linked to [thinkbig.project](https://thinkbig.project)
+1. **Branches will be created for each issue.**
+Please do not push any other branches to github.
+1. **Work only on that branch.**
+Work on the branch that is assigned with the issue.
+1. **Pull dev into your branch regularly.**
+There are rapid changes taking place. To avoid merge conflicts, please pull from `dev` frequently and escpecially before posting a pull request.
+1. **Tag each commit with `#issue_number`.**
+This makes it very easy to track previous changes within github.
+Example: `git commit -m "#30 description here"`
+
+---
+
+## Issues
+
+1. **Do not create issues**
+Issues will be created by the project management team.
+2. **Assign yourself to an issue**
+Feel free to assign yourself to any issue that is posted. They will be labeled to help you decide if it is within your skill level.
+3. **One person per issue**
+Do not assign yourself to an issue that is assigned to someone else.
+4. **One issue at a time**
+If you abandon an issue, please unassign yourself.
+5. **Sprints**
+    * Each issue created will be assigned to the current sprint.
+    * Sprints are one week long, and will end on Saturday at 11:59 pm (Eastern).
+    * If you assigned yourself to an issue and a pull request hasn't been posted by the sprint deadline, you will be unassigned.
+    * If you don't think you'll be able to finish the issue before the sprint deadline but you want to keep working on it, please discuss it on the Discord server in the issues channel.
+
+---
+
+## Pull Requests
+
+1. **Testing**
+    * Pull `dev` into your branch before submitting a pull request.
+    * Test that your code works as expected after doing this.
+2. **Title**
+The title of your pull request should be the default, which is the issue number and issue title.
+3. **Add a description**
+Describe in detail what changes you made and any notes that might need explanation.
+4. **Review**
+Each pull request will be reviewed and ran by the project management team before merging it into `dev`.
+
+---
+
 ## Getting Started
 
 ### Stack
+
 * [Auth.js](https://authjs.dev/)
 * [MongoDB](https://www.mongodb.com/docs/)
 * [Next.js](https://nextjs.org/docs)
@@ -106,8 +164,6 @@ We'll need to provide you with the `.env` variables for development. Those will 
 git clone -b dev --single-branch https://github.com/thinkbig-project/thinkbig.git && cd thinkbig
 ```
 
-
-
 ### Install the dependencies
 
 ```bash
@@ -125,48 +181,3 @@ pnpm dev
 ```url
 http://localhost:3000
 ```
-
----
-
-## Branches & Commits
-1. **The default branch is `dev`**
-`main` will be for production only, and will be directly linked to [thinkbig.project](https://thinkbig.project)
-1. **Branches will be created for each issue.**
-Please do not push any other branches to github.
-1. **Work only on that branch.**
-Work on the branch that is assigned with the issue.
-1. **Pull dev into your branch regularly.**
-There are rapid changes taking place. To avoid merge conflicts, please pull from `dev` frequently and escpecially before posting a pull request.
-1. **Tag each commit with `#issue_number`.**
-This makes it very easy to track previous changes within github.
-Example: `git commit -m "#30 description here"`
-
-## Issues
-
-1. **Do not create issues**
-Issues will be created by the project management team.
-2. **Assign yourself to an issue**
-Feel free to assign yourself to any issue that is posted. They will be labeled to help you decide if it is within your skill level.
-3. **One person per issue**
-Do not assign yourself to an issue that is assigned to someone else.
-4. **One issue at a time**
-If you abandon an issue, please unassign yourself.
-5. **Sprints**
-    * Each issue created will be assigned to the current sprint. 
-    * Sprints are one week long, and will end on Saturday at 11:59 pm (Eastern).
-    * If you assigned yourself to an issue and a pull request hasn't been posted by the sprint deadline, you will be unassigned.
-    * If you don't think you'll be able to finish the issue before the sprint deadline but you want to keep working on it, please discuss it on the Discord server in the issues channel.
-
----
-
-## Pull Requests
-
-1. **Testing**
-    * Pull `dev` into your branch before submitting a pull request.
-    * Test that your code works as expected after doing this.
-2. **Title**
-The title of your pull request should be the default, which is the issue number and issue title.
-3. **Add a description**
-Describe in detail what changes you made and any notes that might need explanation.
-4. **Review**
-Each pull request will be reviewed and ran by the project management team before merging it into `dev`.

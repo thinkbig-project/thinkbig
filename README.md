@@ -2,7 +2,7 @@
 
 ---
 
-👋🏽 Welcome! This is the public repository for the [thinkBig](https://thinkbig.project) web app. If you're here from **_100 Devs_** ⛵ 🪵 🍕 & want to contribute, thank you! 🎉  Please reach out to @GarlandKey on [Discord](https://discordapp.com/users/297864485996068864).
+👋🏽 Welcome! This is the public repository for the [thinkBig](https://thinkbig.project) web app. If you're here from **_100 Devs_** ⛵ 🪵 🍕 & want to contribute, thank you! 🎉 Please checkout the [Onboarding](#onboarding) section for details! 
 
 ---
 

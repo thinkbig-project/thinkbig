@@ -12,6 +12,7 @@ export const getUserSession = async (): Promise<User> => {
     },
   });
   if (!authUserSession)
-    throw new Error('There was a problem authorizing the session.');
+    console.error('There was a problem authorizing the session.');
+  // throw new Error('There was a problem authorizing the session.');
   return authUserSession?.user;
 };

@@ -2,7 +2,7 @@
 
 ---
 
-👋🏽 Welcome! This is the public repository for the [thinkBig](https://thinkbig.project) web app. If you're here from **_100 Devs_** ⛵ 🪵 🍕 & want to contribute, thank you! 🎉 Please checkout the [Onboarding](#onboarding) section for details! 
+👋🏽 Welcome! This is the public repository for the [thinkBig](https://thinkbig.project) web app. If you're here from **_100 Devs_** ⛵ 🪵 🍕 & want to contribute, thank you! 🎉 Please checkout the [Onboarding](#onboarding) section for details - all skill levels are welcome!
 
 ---
 

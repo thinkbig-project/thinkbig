@@ -125,3 +125,48 @@ pnpm dev
 ```url
 http://localhost:3000
 ```
+
+---
+
+## Branches & Commits
+1. **The default branch is `dev`**
+`main` will be for production only, and will be directly linked to [thinkbig.project](https://thinkbig.project)
+1. **Branches will be created for each issue.**
+Please do not push any other branches to github.
+1. **Work only on that branch.**
+Work on the branch that is assigned with the issue.
+1. **Pull dev into your branch regularly.**
+There are rapid changes taking place. To avoid merge conflicts, please pull from `dev` frequently and escpecially before posting a pull request.
+1. **Tag each commit with `#issue_number`.**
+This makes it very easy to track previous changes within github.
+Example: `git commit -m "#30 description here"`
+
+## Issues
+
+1. **Do not create issues**
+Issues will be created by the project management team.
+2. **Assign yourself to an issue**
+Feel free to assign yourself to any issue that is posted. They will be labeled to help you decide if it is within your skill level.
+3. **One person per issue**
+Do not assign yourself to an issue that is assigned to someone else.
+4. **One issue at a time**
+If you abandon an issue, please unassign yourself.
+5. **Sprints**
+    * Each issue created will be assigned to the current sprint. 
+    * Sprints are one week long, and will end on Saturday at 11:59 pm (Eastern).
+    * If you assigned yourself to an issue and a pull request hasn't been posted by the sprint deadline, you will be unassigned.
+    * If you don't think you'll be able to finish the issue before the sprint deadline but you want to keep working on it, please discuss it on the Discord server in the issues channel.
+
+---
+
+## Pull Requests
+
+1. **Testing**
+    * Pull `dev` into your branch before submitting a pull request.
+    * Test that your code works as expected after doing this.
+2. **Title**
+The title of your pull request should be the default, which is the issue number and issue title.
+3. **Add a description**
+Describe in detail what changes you made and any notes that might need explanation.
+4. **Review**
+Each pull request will be reviewed and ran by the project management team before merging it into `dev`.

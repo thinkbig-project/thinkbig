@@ -1,19 +1,14 @@
-![thinkbig-logo](https://github.com/thinkbig-project/thinkbig/assets/3108516/8cb08abe-0d51-47a2-9b01-6d504ae16929)
-
-This is the public repository for the thinkbig web app.
+# thinkBig💡
 
 ---
 
-If you're here from **_100 Devs_** & want to contribute, thank you! Please reach out to me here:
-
-* [Discord](https://discordapp.com/users/297864485996068864)
-* [Email](mailto:code@garlandkey.com)
+👋🏽 Welcome! This is the public repository for the [thinkBig](https://thinkbig.project) web app. If you're here from **_100 Devs_** ⛵ 🪵 🍕 & want to contribute, thank you! 🎉  Please reach out to @GarlandKey on [Discord](https://discordapp.com/users/297864485996068864).
 
 ---
 
 ## Why?
 
-In 2022, [Leon Noel](https://github.com/leonnoel) taught thousands of individuals from across the globe how to code and get a job as a software engineer in the tech industry through [100Devs](100devs.org). The group was so large and diverse regarding lifestyle, responsibilities, scheduling, and timezones that many of us had trouble getting help when we had time to receive it.
+In 2022, [Leon Noel](https://github.com/leonnoel) taught thousands of individuals from across the globe how to code and get a job as a software engineer as part of [100Devs](100devs.org). The group was so large and diverse regarding lifestyle, responsibilities, scheduling, and timezones that many of us had trouble getting help when we had time to receive it.
 
 ## What is thinkbig?
 
@@ -50,40 +45,77 @@ There will be two tabs. One for your requests, and one for everyone else's.
 * The other tab will show all of the open tickets where your availability and skills match. It will show who the contact is and whether or not they're online.
 
 ---
+## Mockups
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![thinkbig-logo](https://github.com/thinkbig-project/thinkbig/assets/3108516/8cb08abe-0d51-47a2-9b01-6d504ae16929)
+
+
+---
+
+## Stack
+* [Auth.js](https://authjs.dev/)
+* [MongoDB](https://www.mongodb.com/docs/)
+* [Next.js](https://nextjs.org/docs)
+* [Prisma](https://www.prisma.io/docs/getting-started)
+* [TailwindCSS](https://tailwindcss.com/docs/installation)
+* [TypeScript](https://www.typescriptlang.org/docs/)
+
+---
+
+## Onboarding
+
+### Request Permissions
+
+Before you can begin, we need to provide you the proper permissions so that you can be assigned issues and submit pull requests.
+
+Please reach out to @GarlandKey on [Discord](https://discordapp.com/users/297864485996068864) and provide the following:
+
+* The Google email address (to provide access to docs).
+* A link to your GitHub (allows us to provide permissions).
+* Your skill level (helps us assign issues within your skill level).
+* Your background (helps us assign non-coding tasks).
+
+### Discussion
+
+So that we have access to uninterupted video chat, we will provide you with a link to a private Discord server. Please note that the rules on this server are the same as they are in **_Learn w/ Leon & Friends_**. This server is for development and nothing else. Remain professional - there is zero tolerance regarding this.
+
+### Protected variables
+
+We'll need to provide you with the `.env` variables for development. Those will be stored in a google doc that will be shared with you during onboarding.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Pre-requisites
+
+* Complete onboarding.
+* `git` - Install globally - [here is a guide.](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+* `npm` - Install globally - [here is a guide.](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+* `pnpm` - Install globally - [here is a guide.](https://pnpm.io/installation)
+
+### Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone -b dev --single-branch https://github.com/thinkbig-project/thinkbig.git && cd thinkbig
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Install the dependencies
 
-## Learn More
+```bash
+pnpm i --frozen-lockfile
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Run the dev server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### View in the browser
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```url
+http://localhost:3000
+```

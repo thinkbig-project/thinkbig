@@ -10,22 +10,47 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id        String  @id @map("_id")
-  discordId String  @unique
-  username  String
-  avatar    String
-  guilds    Guild[]
+model Account {
+  id                String  @id @map("_id")
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
 }
 
-model Guild {
-  id              String   @id @map("_id")
-  guildId         String   @map("id")
-  name            String
-  icon            String
-  owner           Boolean
-  permissions     Int
-  permissions_new String
-  features        String[]
-  user            User     @relation(fields: [id], references: [id])
+model Session {
+  id           String   @id @map("_id")
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  name      String?
+  email     String    @unique
+  image     String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  session   Session[]
+  account   Account[]
+  id        String    @id @map("_id")
+}
+
+model VerificationToken {
+  identifier String   @id @map("_id")
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
 }

@@ -70,7 +70,7 @@ _Word mark:_
 
 _Front page:_
 
-![frontpage](https://github.com/thinkbig-project/thinkbig/assets/3108516/3cd374de-5369-4be5-a724-94d91fce3599)
+![frontpage](https://github.com/thinkbig-project/thinkbig/assets/3108516/ec8c9829-d848-4caa-89bb-b75e904debcc)
 
 ---
 

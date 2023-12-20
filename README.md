@@ -65,7 +65,12 @@ There will be two tabs. One for your requests, and one for everyone else's.
 ## Mockups
 
 _Word mark:_
+
 ![thinkbig-logo](https://github.com/thinkbig-project/thinkbig/assets/3108516/8cb08abe-0d51-47a2-9b01-6d504ae16929)
+
+_Front page:_
+
+![frontpage](https://github.com/thinkbig-project/thinkbig/assets/3108516/3cd374de-5369-4be5-a724-94d91fce3599)
 
 ---
 

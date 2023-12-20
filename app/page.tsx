@@ -1,6 +1,8 @@
 import { getUserSession } from '@/lib/session';
 import Image from 'next/image';
 import {prisma} from '@/lib/prisma';
+import Button from '@/app/components/ui/Button';
+
 
 export default async function Home() {
     const user = await getUserSession();
@@ -30,7 +32,7 @@ export default async function Home() {
                         no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                 </div>
                 <div className='flex justify-center pt-8'>
-                    <button className="rounded-full bg-violet-500 hover:bg-violet-600 p-2">I am a button!</button>
+                    <Button title='Sign in' href="/api/auth/signin" />
                 </div>
 
                 <footer className='fixed inset-x-0 bottom-0 m-9 border-4 border-x-transparent bg-black'>

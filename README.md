@@ -39,11 +39,11 @@ A web app that works as a companion to the **_Learn w/ Leon & Friends_** Discord
 Upon account creation, an account setup page will appear.
 
 1. The user will be prompted to choose from an array of tags to describe the skill level for which they are willing to provide help to others (e.g. html-intermediate, css-intermediate, js-beginner, node-beginner).
-2. The user will also be prompted to pick an availability schedule. These time slots will be used to indiate when the user is able to receive and/or provide help.
+2. The user will also be prompted to pick an availability schedule. These time slots will be used to indicate when the user is able to receive and/or provide help.
 
 #### Help Request Management
 
-Upon setup completion, the user is passed to the dashboard, where they will be able to create, read, update and delete their own help requests, or look through existing help requets from others.
+Upon setup completion, the user is passed to the dashboard, where they will be able to create, read, update and delete their own help requests, or look through existing help requests from others.
 
 ##### Help request modal
 
@@ -70,7 +70,11 @@ _Word mark:_
 
 _Front page:_
 
-![frontpage](https://github.com/thinkbig-project/thinkbig/assets/3108516/ec8c9829-d848-4caa-89bb-b75e904debcc)
+![brain_demo](https://github.com/thinkbig-project/thinkbig/assets/3108516/f45056eb-06ab-4db5-808b-5bc4674411cc)
+
+_Dashboard:_
+
+![dashboard3](https://github.com/thinkbig-project/thinkbig/assets/3108516/37fb84cd-8d8f-40e2-8092-783ab8d75643)
 
 ---
 
@@ -80,7 +84,7 @@ _Front page:_
 
 Before you can begin, we need to provide you the proper permissions so that you can be assigned issues and submit pull requests.
 
-Please reach out to @GarlandKey on [Discord](https://discordapp.com/users/297864485996068864) and provide the following:
+Please reach out to @GarlandKey via email: [code@garlandkey.com](mailto:code@garlandkey.com).
 
 * The Google email address (to provide access to docs).
 * A link to your GitHub (allows us to provide permissions).
@@ -89,7 +93,11 @@ Please reach out to @GarlandKey on [Discord](https://discordapp.com/users/297864
 
 ### Discussion
 
-So that we have access to uninterupted video chat, we will provide you with a link to a private Discord server. Please note that the rules on this server are the same as they are in **_Learn w/ Leon & Friends_**. This server is for development and nothing else. Remain professional - there is zero tolerance regarding this.
+In order to remain compliant with the rules of **_Learn w/ Leon & Friends_**, we have removed the Discord server. From now on, all communication will happen as follows:
+
+* All text discussion will happen in [GitHub Discussions](https://github.com/orgs/thinkbig-project/discussions).
+* For voice conversations, we will communicate exclusively on **_Learn w/ Leon & Friends_** Discord server in #voice-03.
+* For sensitive information (such as protected variables), you must email me at [code@garlandkey.com](mailto:code@garlandkey.com).
 
 ### Protected variables
 
@@ -106,7 +114,7 @@ Please do not push any other branches to github.
 1. **Work only on that branch.**
 Work on the branch that is assigned with the issue.
 1. **Pull dev into your branch regularly.**
-There are rapid changes taking place. To avoid merge conflicts, please pull from `dev` frequently and escpecially before posting a pull request.
+There are rapid changes taking place. To avoid merge conflicts, please pull from `dev` frequently and especially before posting a pull request.
 1. **Tag each commit with `#issue_number`.**
 This makes it very easy to track previous changes within github.
 Example: `git commit -m "#30 description here"`

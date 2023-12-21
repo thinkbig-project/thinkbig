@@ -84,7 +84,7 @@ _Dashboard:_
 
 Before you can begin, we need to provide you the proper permissions so that you can be assigned issues and submit pull requests.
 
-Please reach out to @GarlandKey on [Discord](https://discordapp.com/users/297864485996068864) and provide the following:
+Please reach out to @GarlandKey via email: [code@garlandkey.com](mailto:code@garlandkey.com).
 
 * The Google email address (to provide access to docs).
 * A link to your GitHub (allows us to provide permissions).

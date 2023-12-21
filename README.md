@@ -93,7 +93,11 @@ Please reach out to @GarlandKey on [Discord](https://discordapp.com/users/297864
 
 ### Discussion
 
-So that we have access to uninterrupted video chat, we will provide you with a link to a private Discord server. Please note that the rules on this server are the same as they are in **_Learn w/ Leon & Friends_**. This server is for development and nothing else. Remain professional - there is zero tolerance regarding this.
+In order to remain compliant with the rules of **_Learn w/ Leon & Friends_**, we have removed the Discord server. From now on, all communication will happen as follows:
+
+* All text discussion will happen in [GitHub Discussions](https://github.com/orgs/thinkbig-project/discussions).
+* For voice conversations, we will communicate exclusively on **_Learn w/ Leon & Friends_** Discord server in #voice-03.
+* For sensitive information (such as protected variables), you must email me at [code@garlandkey.com](mailto:code@garlandkey.com).
 
 ### Protected variables
 

@@ -80,28 +80,11 @@ _Dashboard:_
 
 ## Onboarding
 
-### Request Permissions
-
-Before you can begin, we need to provide you the proper permissions so that you can be assigned issues and submit pull requests.
-
-Please reach out to @GarlandKey via email: [code@garlandkey.com](mailto:code@garlandkey.com).
-
-* The Google email address (to provide access to docs).
-* A link to your GitHub (allows us to provide permissions).
-* Your skill level (helps us assign issues within your skill level).
-* Your background (helps us assign non-coding tasks).
-
-### Discussion
-
-In order to remain compliant with the rules of **_Learn w/ Leon & Friends_**, we have removed the Discord server. From now on, all communication will happen as follows:
-
-* All text discussion will happen in [GitHub Discussions](https://github.com/orgs/thinkbig-project/discussions).
-* For voice conversations, we will communicate exclusively on **_Learn w/ Leon & Friends_** Discord server in #voice-03.
-* For sensitive information (such as protected variables), you must email me at [code@garlandkey.com](mailto:code@garlandkey.com).
+See [GitHub Discussions](https://github.com/orgs/thinkbig-project/discussions/29) for further details.
 
 ### Protected variables
 
-We'll need to provide you with the `.env` variables for development. Those will be stored in a google doc that will be shared with you during onboarding.
+We'll need to provide you with the `.env` variables for development. As a precaution, you will be provided a link after you have successfully completed a '_good first issue_'. Upon completion, we will email you a link to the google doc.
 
 ---
 
@@ -154,6 +137,8 @@ Each pull request will be reviewed and ran by the project management team before
 ---
 
 ## Getting Started
+
+> 👉🏽 See [Protected variables](#protected-variables) for details on `.env`.
 
 ### Stack
 

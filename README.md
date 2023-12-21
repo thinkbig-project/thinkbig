@@ -72,6 +72,10 @@ _Front page:_
 
 ![brain_demo](https://github.com/thinkbig-project/thinkbig/assets/3108516/f45056eb-06ab-4db5-808b-5bc4674411cc)
 
+_Dashboard:_
+
+![dashboard3](https://github.com/thinkbig-project/thinkbig/assets/3108516/37fb84cd-8d8f-40e2-8092-783ab8d75643)
+
 ---
 
 ## Onboarding

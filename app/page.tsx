@@ -2,6 +2,7 @@ import { getUserSession } from '@/lib/session';
 import Image from 'next/image';
 import {prisma} from '@/lib/prisma';
 import Button from '@/app/components/ui/Button';
+import Parallax from '@/app/components/ui/EmojiParallax/Emoji';
 
 
 export default async function Home() {
@@ -9,6 +10,13 @@ export default async function Home() {
     
     return (
         <main className='flex min-h-screen flex-col items-center justify-between p-24 overflow-hidden h-screen'>
+            <Parallax emoji="🧠" />
+            <Parallax emoji="🧠" />
+            <Parallax emoji="🧠" />
+            <Parallax emoji="🧠" />
+            <Parallax emoji="🧠" />
+            <Parallax emoji="🧠" />
+            <Parallax emoji="🧠" />
             <div className="container mx-auto">
                 <div className='flex justify-center'>
                     <Image src={'/thinkbig-logo.svg'} width={500} height={150} alt={'thinkbig logo'}></Image>

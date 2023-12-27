@@ -25,23 +25,33 @@ const authOptions: NextAuthOptions = {
   ],
   callbacks: {
     async signIn({ user, account }): Promise<boolean> {
-      if (account?.provider !== 'discord' && !user.id) {
-        throw new Error('No profile returned from Discord');
+      try {
+        console.log('Attempting to upsert user:', user);
+        // if (account?.provider !== 'discord' && !user.id) {
+        // throw new Error('No profile returned from Discord');
+        const result = await prisma.user.upsert({
+          where: { email: user.email as string },
+          create: {
+            email: user.email as string,
+            name: user.name as string,
+            image: user.image as string,
+            id: user.id as string,
+          },
+          update: {
+            name: user.name as string,
+            image: user.image as string,
+          },
+        });
+        console.log('User saved:', result);
+        const savedUser = await prisma.user.findUnique({
+          where: { email: user.email as string },
+        });
+        console.log('Saved user in database:', savedUser);
+        return true;
+      } catch (error) {
+        console.error('Error during user upsert:', error);
+        throw new Error('Failed to save user information. Please try again.');
       }
-      await prisma.user.upsert({
-        where: { email: user.email as string },
-        create: {
-          email: user.email as string,
-          name: user.name as string,
-          image: user.image as string,
-          id: user.id as string,
-        },
-        update: {
-          name: user.name as string,
-          image: user.image as string,
-        },
-      });
-      return true;
     },
     session,
     async jwt({ token, user }) {
@@ -50,6 +60,7 @@ const authOptions: NextAuthOptions = {
           const userAccount = await prisma.user.findUnique({
             where: { email: user.email as string },
           });
+          console.log('userAccount: \n', userAccount);
           if (!user) {
             throw new Error('No user found');
           }

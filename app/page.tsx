@@ -4,7 +4,7 @@ import {prisma} from '@/lib/prisma';
 import Button from '@/app/components/ui/Button';
 
 
-export default async function Home() {
+const Home = async () => {
     const user = await getUserSession();
 
     return (
@@ -71,3 +71,5 @@ export default async function Home() {
         </main>
     );
 }
+
+export default Home;

@@ -1,15 +1,17 @@
 import Image from 'next/image';
 
 export interface AvatarProps {
-  url: string;
+  avatar: string;
 }
 
-export default function Avatar({ url }: AvatarProps) {
+export default function Avatar({ avatar }: AvatarProps) {
   return (
     <Image
       className='aspect-square rounded-full w-full h-full hover:brightness-110'
-      src={url}
+      src={avatar}
       alt='Profile picture of the user'
+      height={48}
+      width={48}
     />
   );
 }

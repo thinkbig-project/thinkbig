@@ -5,7 +5,13 @@ interface CardProps {
   type: string;
   title: string;
   desc: string;
-  matches: object[];
+  matches: Matches[];
+}
+
+interface Matches {
+  id: number;
+  name: string;
+  avatar: string;
 }
 
 const handleClick = () => {
@@ -26,7 +32,10 @@ const Card: React.FC<CardProps> = ({ type, title, desc, matches }) => {
       <div>
         <p>{desc}</p>
         <div>
-          <Avatar src={user.} alt={'user'}/>
+          {matches.map((match) => (
+            <Avatar key={match.id} avatar={match.avatar} />
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 import React from 'react'
 
-interface TagProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
+interface TagProps {
     tagType: "css" | "ejs" | "html" | "js" | "mongo/mongoose" | "node/express" | "react"
 }
 

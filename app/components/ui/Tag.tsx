@@ -8,7 +8,7 @@ export default function Tag({tagType}: TagProps) {
     
     // BASE FORMATTING FOR ALL TAGS
 
-    const mainTagStyle = 'px-2 py-1 rounded font-bold font-sans'
+    const mainTagStyle = 'text-xs font-medium font-sans me-2 px-2.5 py-0.5 rounded'
 
     // CONDITIONAL FORMATTING BASED ON 'tagType' of tag. 
     

@@ -4,12 +4,16 @@ interface TagProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
     tagType: "css" | "ejs" | "html" | "js" | "mongo/mongoose" | "node/express" | "react"
 }
 
-//TODO limit tagType prop to "css" | "ejs" | "html" | "js" | "mongo/mongoose" | "node/express" | "react"
-
 export default function Tag({tagType}: TagProps) {
+    
+    // BASE FORMATTING FOR ALL TAGS
 
+    const mainTagStyle = 'px-2 py-1 rounded font-bold font-sans'
+
+    // CONDITIONAL FORMATTING BASED ON 'tagType' of tag. 
+    
     let conditionalTagStyle : string = ''
-    // CONDITIONAL FORMATTING BASED ON 'tagType' of tag.  types defined as : 
+    
     switch (tagType) {
         case 'css':
           conditionalTagStyle = 'bg-[#0959df] text-white';
@@ -35,10 +39,12 @@ export default function Tag({tagType}: TagProps) {
         default:
           conditionalTagStyle = 'bg-yellow-400 text-black'
       }
-    
-    const mainTagStyle = 'px-2 py-1 rounded font-bold'
 
+         //100DEVS, WE GO GET!
+ 
     return (
         <span className={conditionalTagStyle +' '+ mainTagStyle}>{tagType}</span>
     )
+
+ 
 }

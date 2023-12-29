@@ -1,41 +1,44 @@
 import React from 'react'
 
 export interface TagProps {
-    type: string
+    tagType: string
 }
 
-//TODO limit type prop to "css" | "ejs" | "html" | "js" | "mongo/mongoose" | "node/express" | "react"
+//TODO limit tagType prop to "css" | "ejs" | "html" | "js" | "mongo/mongoose" | "node/express" | "react"
 
-export default function Tag({type}: TagProps) {
+export default function Tag({tagType}: TagProps) {
 
-    let tagStyle : string = ''
-
-    switch (type) {
+    let conditionalTagStyle : string = ''
+    // CONDITIONAL FORMATTING BASED ON 'tagType' of tag.  types defined as : 
+    switch (tagType) {
         case 'css':
-          tagStyle = 'bg-[#0959df] text-white';
+          conditionalTagStyle = 'bg-[#0959df] text-white';
           break;
         case 'ejs':
-          tagStyle = 'bg-[#dfdd09] text-black'
+          conditionalTagStyle = 'bg-[#98265b] text-white'
           break;
         case 'html':
-          tagStyle = 'bg-[#2d2b6b] text-black'
+          conditionalTagStyle = 'bg-[#2d2b6b] text-white'
           break;
-        case 'mongo':
-          tagStyle = 'bg-[#00c55b] text-white'
+        case 'js':
+          conditionalTagStyle = 'bg-[#dfdd09] text-white'
           break;
-        case 'node':
-          tagStyle = 'bg-[#6aa05c] text-black'
+        case 'mongo/mongoose':
+          conditionalTagStyle = 'bg-[#00c55b] text-white'
+          break;
+        case 'node/express':
+          conditionalTagStyle = 'bg-[#6aa05c] text-white'
           break;
         case 'react':
-          tagStyle = 'bg-[#5fdafb] text-white'
+          conditionalTagStyle = 'bg-[#5fdafb] text-white'
           break;  
         default:
-          tagStyle = 'bg-yellow-400 text-black'
+          conditionalTagStyle = 'bg-yellow-400 text-black'
       }
     
     const mainTagStyle = 'px-2 py-1 rounded font-bold'
 
     return (
-        <span className={tagStyle +' '+ mainTagStyle}>{type}</span>
+        <span className={conditionalTagStyle +' '+ mainTagStyle}>{tagType}</span>
     )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 
-export interface TagProps {
-    tagType: string
+interface TagProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
+    tagType: "css" | "ejs" | "html" | "js" | "mongo/mongoose" | "node/express" | "react"
 }
 
 //TODO limit tagType prop to "css" | "ejs" | "html" | "js" | "mongo/mongoose" | "node/express" | "react"

@@ -9,13 +9,13 @@ const btnStyle = "p-2 m-1 rounded bg-violet-600 hover:bg-violet-700 active:bg-vi
 const CrudButton: React.FC<CrudButtonProps> = ({ kind, ...props }) => {
     const kindCreate = (
         <svg width="20" height="20" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" >
-            <title>Plus</title>
+            <title>Create</title>
             <path fillRule="evenodd" d="M11 13v5h2v-5h5v-2h-5V6h-2v5H6v2h5Z" clipRule="evenodd" />
         </svg>
     );
     const kindTrash = (
         <svg height="20px" width="20px" viewBox="0 -0.5 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" >
-            <title>Trash</title>
+            <title>Delete</title>
             <g id="Page-1" stroke="none" strokeWidth="1" fillRule="evenodd">
                 <g id="Dribbble-Light-Preview" transform="translate(-179.000000, -360.000000)" >
                     <g id="types" transform="translate(56.000000, 160.000000)">
@@ -27,7 +27,7 @@ const CrudButton: React.FC<CrudButtonProps> = ({ kind, ...props }) => {
         </svg>);
     const kindUpdate = (
         <svg height="20px" width="20px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <title>Pen</title>
+            <title>Update</title>
             <g id="edit">
                 <g><path d="M6.5,24H0v-6.5L17.5,0L24,6.5L6.5,24z M2,22h3.7L18,9.7L14.3,6L2,18.3V22z M15.7,4.6l3.7,3.7l1.8-1.8l-3.7-3.7L15.7,4.6z" /></g>
             </g>

@@ -25,7 +25,7 @@ export default function Tag({tagType}: TagProps) {
           conditionalTagStyle = 'bg-[#2d2b6b] text-white'
           break;
         case 'js':
-          conditionalTagStyle = 'bg-[#dfdd09] text-white'
+          conditionalTagStyle = 'bg-[#dfdd09] text-black'
           break;
         case 'mongo/mongoose':
           conditionalTagStyle = 'bg-[#00c55b] text-white'

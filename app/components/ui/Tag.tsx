@@ -28,16 +28,17 @@ export default function Tag({tagType}: TagProps) {
           conditionalTagStyle = 'bg-[#dfdd09] text-black'
           break;
         case 'mongo/mongoose':
-          conditionalTagStyle = 'bg-[#00c55b] text-white'
+          conditionalTagStyle = 'bg-[#00c55b] text-black'
           break;
         case 'node/express':
-          conditionalTagStyle = 'bg-[#6aa05c] text-white'
+          conditionalTagStyle = 'bg-[#6Da460] text-black'
           break;
         case 'react':
-          conditionalTagStyle = 'bg-[#5fdafb] text-white'
+          conditionalTagStyle = 'bg-[#5fdafb] text-black'
           break;  
         default:
-          conditionalTagStyle = 'bg-yellow-400 text-black'
+          //this should never actually appear since types are restricted
+          conditionalTagStyle = '#EAD02A text-black'
       }
 
          //100DEVS, WE GO GET!

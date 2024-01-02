@@ -20,7 +20,7 @@ const handleClick = () => {
 
 const Card: React.FC<CardProps> = ({ type, title, desc, matches }) => {
   return (
-    <section className=''>
+    <section className='w-1/2'>
       <div>
         <Image src='/placeholder.png' alt='type' height={50} width={50} />
         <h2>{title}</h2>

@@ -25,39 +25,33 @@ const authOptions: NextAuthOptions = {
   ],
   callbacks: {
     async signIn({ user, account }): Promise<boolean> {
-      if (account?.provider !== 'discord' && !user.id) {
-        throw new Error('No profile returned from Discord');
+      try {
+        await prisma.user.upsert({
+          where: { email: user.email as string },
+          create: {
+            email: user.email as string,
+            name: user.name as string,
+            image: user.image as string,
+            id: user.id as string,
+          },
+          update: {
+            name: user.name as string,
+            image: user.image as string,
+          },
+        });
+        return true;
+      } catch (error) {
+        console.error('Error during user upsert:', error);
+        return false;
       }
-      await prisma.user.upsert({
-        where: { email: user.email as string },
-        create: {
-          email: user.email as string,
-          name: user.name as string,
-          image: user.image as string,
-          id: user.id as string,
-        },
-        update: {
-          name: user.name as string,
-          image: user.image as string,
-        },
-      });
-      return true;
+    },
+    async redirect({ url, baseUrl }) {
+      return url === baseUrl || url === '/' ? `${baseUrl}/dashboard` : url;
     },
     session,
     async jwt({ token, user }) {
       if (user) {
-        try {
-          const userAccount = await prisma.user.findUnique({
-            where: { email: user.email as string },
-          });
-          if (!user) {
-            throw new Error('No user found');
-          }
-          token.id = user.id;
-        } catch (error) {
-          console.log('Error finding user:', error);
-          throw new Error('Failed to find user.');
-        }
+        token.id = user.id;
       }
       return token;
     },

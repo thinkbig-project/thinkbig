@@ -25,3 +25,26 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@keyframes move-y {
+  0% {
+    transform: translateY(110vh) translateX(10vw) scale(var(--scale));
+    /* 110vh to hide the element initially, can be modified depending on the size of the emoji */
+  }
+  25% {
+    transform: translateY(50vh) translateX(0vw) scale(var(--scale));
+  }
+  50% {
+    transform: translateY(0vh) translateX(10vw) scale(var(--scale));
+  }
+  75% {
+    transform: translateY(-50vh) translateX(0vw) scale(var(--scale));
+  }
+  100% {
+    transform: translateY(-100vh) translateX(-10vw) scale(var(--scale));
+  }
+}
+
+.move-y {
+  animation: move-y var(--speed) infinite linear;
+}

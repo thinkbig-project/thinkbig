@@ -1,11 +1,11 @@
 
 import Image from 'next/image';
-import assignmentIcon from '@/path/to/assignment-icon.png';
-import classIcon from '@/path/to/class-icon.png';
-import codeIcon from '@/path/to/code-icon.png';
-import conceptIcon from '@/path/to/concept-icon.png';
-import lfsgIcon from '@/path/to/lfsg-icon.png';
-import watchAlongIcon from '@/path/to/watch-along-icon.png';
+import assignmentIcon from '@/app/favicon.ico';
+import classIcon from '@/app/favicon.ico';
+import codeIcon from '@/app/favicon.ico';
+import conceptIcon from '@/app/favicon.ico';
+import lfsgIcon from '@/app/favicon.ico';
+import watchAlongIcon from '@/app/favicon.ico';
 
 interface TypeTagProps {
   type: 'assignment' | 'class' | 'code' | 'concept' | 'lfsg' | 'watchAlong';

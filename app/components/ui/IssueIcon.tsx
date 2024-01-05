@@ -34,7 +34,7 @@ const IssueIcon: React.FC<IssueIconProps> = ({ type }) => {
   const imageSrc = getImageSrc();
 
   return (
-    <div className='aspect-auto p-2'>
+    <div className='aspect-auto p-1'>
       <Image src={imageSrc} alt={`${type} icon`} width={32} height={32} />
     </div>
   );

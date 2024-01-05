@@ -1,16 +1,16 @@
-import TypeTag from "../components/ui/TypeTag";
+import IssueIcon from "../components/ui/IssueIcon";
 
 const Dashboard = async () => {
   return (
     <>
       <h1>Dashboard</h1>
       <div>
-        <TypeTag type="assignment" />
-        <TypeTag type="class" />
-        <TypeTag type="code" />
-        <TypeTag type="concept" />
-        <TypeTag type="lfsg" />
-        <TypeTag type="watchAlong" />
+        <IssueIcon type="assignment" />
+        <IssueIcon type="class" />
+        <IssueIcon type="code" />
+        <IssueIcon type="concept" />
+        <IssueIcon type="lfsg" />
+        <IssueIcon type="watchAlong" />
       </div>
     </>
   );

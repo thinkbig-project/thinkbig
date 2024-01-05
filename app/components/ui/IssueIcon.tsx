@@ -7,11 +7,11 @@ import conceptIcon from '@/app/favicon.ico';
 import lfsgIcon from '@/app/favicon.ico';
 import watchAlongIcon from '@/app/favicon.ico';
 
-interface TypeTagProps {
+interface IssueIconProps {
   type: 'assignment' | 'class' | 'code' | 'concept' | 'lfsg' | 'watchAlong';
 }
 
-const TypeTag: React.FC<TypeTagProps> = ({ type }) => {
+const IssueIcon: React.FC<IssueIconProps> = ({ type }) => {
   const getImageSrc = () => {
     switch (type) {
       case 'assignment':
@@ -34,10 +34,10 @@ const TypeTag: React.FC<TypeTagProps> = ({ type }) => {
   const imageSrc = getImageSrc();
 
   return (
-    <div className="type-tag">
+    <div className='aspect-auto p-2'>
       <Image src={imageSrc} alt={`${type} icon`} width={32} height={32} />
     </div>
   );
 };
 
-export default TypeTag;
+export default IssueIcon;

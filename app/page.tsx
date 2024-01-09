@@ -4,7 +4,7 @@ import { prisma } from '@/lib/prisma';
 import Button from '@/app/components/ui/Button';
 import EmojiParallaxContainer from './components/ui/parallax/EmojiParallaxContainer';
 import EmojiParallaxItem from './components/ui/parallax/EmojiParallaxItem';
-
+// test
 export default async function Home() {
   const user = await getUserSession();
 
@@ -13,8 +13,8 @@ export default async function Home() {
       <EmojiParallaxContainer>
         <EmojiParallaxItem />
       </EmojiParallaxContainer>
-      <main className='flex min-h-screen flex-col items-center justify-between p-24 overflow-hidden h-screen'>
-        <div className='container w-5/12 border-2 border-gray-200 rounded-3xl bg-white bg-opacity-20 backdrop-blur-md drop-shadow-md p-6'>
+      <main className='flex flex-col items-center justify-between h-screen min-h-screen p-24 overflow-hidden'>
+        <div className='container w-5/12 p-6 bg-white border-2 border-gray-200 rounded-3xl bg-opacity-20 backdrop-blur-md drop-shadow-md'>
           <div className='flex justify-center'>
             <Image
               src={'/thinkbig-logo.svg'}
@@ -45,7 +45,7 @@ export default async function Home() {
             <Button title='Sign in' href='/api/auth/signin' />
           </div>
         </div>
-        <footer className='fixed inset-x-0 bottom-0 m-9 border-4 border-x-transparent bg-gray-800'>
+        <footer className='fixed inset-x-0 bottom-0 bg-gray-800 border-4 m-9 border-x-transparent'>
           <div className='flex justify-stretch'>
             <div className='flex-1'>
               <p>

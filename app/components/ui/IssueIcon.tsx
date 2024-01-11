@@ -7,7 +7,6 @@ import lfsgIcon from '@/public/placeholder.png';
 import watchAlongIcon from '@/public/placeholder.png';
 
 interface IssueIconProps {
-  size: '4' | '8' | '16' | '32' | '64';
   type: 'assignment' | 'class' | 'code' | 'concept' | 'lfsg' | 'watchAlong';
 }
 
@@ -30,11 +29,11 @@ const IssueIcon: React.FC<IssueIconProps> = ({ size, type }) => {
         return '';
     }
   };
-
+  console.log(`size: w-${size}`, typeof size);
   const imageSrc = getImageSrc();
 
   return (
-    <div className={`aspect-square w-${size}`}>
+    <div className='aspect-square w-8'>
       <Image src={imageSrc} alt={`${type} icon`} />
     </div>
   );

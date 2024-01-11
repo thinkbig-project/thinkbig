@@ -34,7 +34,7 @@ const Card: React.FC<CardProps> = ({ type, title, desc, matches }) => {
           id='left-container'
           className='flex flex-col gap-4 items-start w-3/4'
         >
-          <div id='title-container' className='flex flex-row gap-4 w-3/4'>
+          <div id='title-container' className='flex flex-row gap-4 max-w-full w-3/4'>
             <IssueIcon size='8' type='assignment' />
             <h2 className='text-2xl w-full'>{title}</h2>
           </div>

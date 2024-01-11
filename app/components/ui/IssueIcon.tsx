@@ -10,7 +10,7 @@ interface IssueIconProps {
   type: 'assignment' | 'class' | 'code' | 'concept' | 'lfsg' | 'watchAlong';
 }
 
-const IssueIcon: React.FC<IssueIconProps> = ({ size, type }) => {
+const IssueIcon: React.FC<IssueIconProps> = ({ type }) => {
   const getImageSrc = () => {
     switch (type) {
       case 'assignment':
@@ -29,7 +29,7 @@ const IssueIcon: React.FC<IssueIconProps> = ({ size, type }) => {
         return '';
     }
   };
-  console.log(`size: w-${size}`, typeof size);
+
   const imageSrc = getImageSrc();
 
   return (

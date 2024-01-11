@@ -1,5 +1,5 @@
 'use client';
-import Card from '@/app/components/ui/Card';
+import { Card } from '@/app/components';
 
 const Dashboard = async () => { //eslint-disable-line
   return (
@@ -19,19 +19,19 @@ const Dashboard = async () => { //eslint-disable-line
             },
             {
               id: 2,
-              name: 'John Doe',
+              name: 'John Joe',
               avatar:
                 'https://cdn.discordapp.com/avatars/297864485996068864/86eff9813511d8173f0f0ff9d16ac340.png',
             },
             {
               id: 3,
-              name: 'John Doe',
+              name: 'John Bro',
               avatar:
                 'https://cdn.discordapp.com/avatars/297864485996068864/86eff9813511d8173f0f0ff9d16ac340.png',
             },
             {
               id: 4,
-              name: 'John Doe',
+              name: 'John Go',
               avatar:
                 'https://cdn.discordapp.com/avatars/297864485996068864/86eff9813511d8173f0f0ff9d16ac340.png',
             },

@@ -1,9 +1,11 @@
 import { getUserSession } from '@/lib/session';
 import Image from 'next/image';
 import { prisma } from '@/lib/prisma';
-import Button from '@/app/components/ui/Button';
-import EmojiParallaxContainer from './components/ui/parallax/EmojiParallaxContainer';
-import EmojiParallaxItem from './components/ui/parallax/EmojiParallaxItem';
+import {
+  Button,
+  EmojiParallaxContainer,
+  EmojiParallaxItem,
+} from '@/app/components';
 
 export default async function Home() {
   const user = await getUserSession();

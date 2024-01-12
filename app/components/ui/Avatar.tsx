@@ -1,10 +1,6 @@
 import Image from 'next/image';
 
-export interface AvatarProps {
-  avatar: string;
-  className?: string;
-  user: string;
-}
+import { AvatarProps } from '@/types'; // type/interface props
 
 export default function Avatar({ avatar, className, user }: AvatarProps) {
   return (

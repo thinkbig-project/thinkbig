@@ -2,9 +2,7 @@
 import Image from "next/image";
 
 
-interface CloseButtonProps {
-    onClose?: () => void;
-}
+import { CloseButtonProps } from "@/types"; // type/interface props
 
 const CloseButton: React.FC<CloseButtonProps> = ({ onClose }) => {
     return (

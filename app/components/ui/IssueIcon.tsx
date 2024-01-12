@@ -1,11 +1,10 @@
-
 import Image from 'next/image';
-import assignmentIcon from '@/app/favicon.ico';
-import classIcon from '@/app/favicon.ico';
-import codeIcon from '@/app/favicon.ico';
-import conceptIcon from '@/app/favicon.ico';
-import lfsgIcon from '@/app/favicon.ico';
-import watchAlongIcon from '@/app/favicon.ico';
+import assignmentIcon from '@/public/placeholder.png';
+import classIcon from '@/public/placeholder.png';
+import codeIcon from '@/public/placeholder.png';
+import conceptIcon from '@/public/placeholder.png';
+import lfsgIcon from '@/public/placeholder.png';
+import watchAlongIcon from '@/public/placeholder.png';
 
 interface IssueIconProps {
   type: 'assignment' | 'class' | 'code' | 'concept' | 'lfsg' | 'watchAlong';
@@ -27,15 +26,15 @@ const IssueIcon: React.FC<IssueIconProps> = ({ type }) => {
       case 'watchAlong':
         return watchAlongIcon;
       default:
-        return ''; // Placeholder for default or unknown type
+        return '';
     }
   };
 
   const imageSrc = getImageSrc();
 
   return (
-    <div className='aspect-auto p-1'>
-      <Image src={imageSrc} alt={`${type} icon`} width={32} height={32} />
+    <div className='aspect-square w-8'>
+      <Image src={imageSrc} alt={`${type} icon`} />
     </div>
   );
 };

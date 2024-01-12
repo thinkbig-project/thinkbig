@@ -1,4 +1,4 @@
-import {getUserSession} from '@/lib/session';
+import { getUserSession } from '@/lib/session';
 import Image from 'next/image';
 import { prisma } from '@/lib/prisma';
 import Button from '@/app/components/ui/Button';

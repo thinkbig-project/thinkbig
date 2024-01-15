@@ -1,13 +1,6 @@
 import React, { useState } from 'react';
 
-type DropdownProps = {
-    error: string;
-    id: string;
-    label: string;
-    options: string[];
-    onChange: () => void;
-    value: string;
-};
+import { DropdownProps } from '@/types'; // type/interface props
 
 const Dropdown: React.FC<DropdownProps> = ({ error, id, label, options, onChange, value }) => {
     const [selected, setSelected] = useState<string | null>(null);

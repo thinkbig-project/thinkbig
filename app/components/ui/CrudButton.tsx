@@ -4,9 +4,7 @@ import createIcon from '@/public/placeholder.png';
 import updateIcon from '@/public/placeholder.png';
 import deleteIcon from '@/public/placeholder.png';
 
-interface CrudButtonProps {
-  type: 'create' | 'update' | 'delete';
-}
+import { CrudButtonProps } from '@/types'; // type/interface props
 
 const CrudButton: React.FC<CrudButtonProps> = ({ type, ...props }) => {
   const getImgSrc = () => {

@@ -6,9 +6,7 @@ import conceptIcon from '@/public/placeholder.png';
 import lfsgIcon from '@/public/placeholder.png';
 import watchAlongIcon from '@/public/placeholder.png';
 
-interface IssueIconProps {
-  type: 'assignment' | 'class' | 'code' | 'concept' | 'lfsg' | 'watchAlong';
-}
+import { IssueIconProps } from '@/types'; // type/interface props
 
 const IssueIcon: React.FC<IssueIconProps> = ({ type }) => {
   const getImageSrc = () => {

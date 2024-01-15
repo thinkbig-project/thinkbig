@@ -48,3 +48,21 @@ body {
 .move-y {
   animation: move-y var(--speed) infinite linear;
 }
+
+.scrollbar-content {
+  scrollbar-width: thin;
+  scrollbar-color: #555555 #242262;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #555555;
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #242262;
+  }
+}

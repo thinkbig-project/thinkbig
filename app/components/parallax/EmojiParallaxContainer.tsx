@@ -1,6 +1,4 @@
-type TEmojiParallaxContainer = {
-  children: React.ReactNode;
-};
+import { TEmojiParallaxContainer } from "@/types"; // type/interface props
 
 function EmojiParallaxContainer({ children }: TEmojiParallaxContainer) {
   return (

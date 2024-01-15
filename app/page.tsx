@@ -1,9 +1,8 @@
 import { getUserSession } from '@/lib/session';
 import Image from 'next/image';
-import { prisma } from '@/lib/prisma';
 import Button from '@/app/components/ui/Button';
-import EmojiParallaxContainer from './components/parallax/EmojiParallaxContainer';
-import EmojiParallaxItem from './components/parallax/EmojiParallaxItem';
+import EmojiParallaxContainer from '@/app/components/parallax/EmojiParallaxContainer';
+import EmojiParallaxItem from '@/app/components/parallax/EmojiParallaxItem';
 
 export default async function Home() {
   const user = await getUserSession();
@@ -27,18 +26,10 @@ export default async function Home() {
               }}
             />
           </div>
-          <div className='flex justify-center ml-9 mr-9'>
-            <p className='pt-5'>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-              invidunt ut labore et dolore magna aliquyam erat, sed diam
-              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-              dolor sit amet.
+          <div className='flex flex-col justify-center'>
+            <h2 className='font-bold text-2xl text-center'>In Active Development!</h2>
+            <p className='py-4 text-md'>
+              Each time a pull request is merged into development, you will see the changes here in real time.
             </p>
           </div>
           <div className='flex justify-center pt-8'>

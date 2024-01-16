@@ -42,18 +42,6 @@ const Dashboard: React.FC = () => {
           desc='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
           matches={matches}
         />
-        <Input
-          disabled={false}
-          error=''
-          id='id'
-          label='Email Address'
-          onChange={(e) => {
-            setInput(e.target.value);
-          }}
-          readOnly={false}
-          type='text'
-          value={input}
-        />
       </div>
     </>
   );

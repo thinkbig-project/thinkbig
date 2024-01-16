@@ -1,15 +1,5 @@
 import { useState } from 'react';
-
-type InputProps = {
-  disabled: boolean;
-  error: string;
-  id: string;
-  label: string;
-  onChange: (e: any) => void;
-  readOnly: boolean;
-  type: string;
-  value: string;
-};
+import { InputProps } from '@/types';
 
 const Input: React.FC<InputProps> = ({
   disabled,
@@ -22,16 +12,14 @@ const Input: React.FC<InputProps> = ({
   value,
 }) => {
   const [showToolTip, setShowToolTip] = useState<boolean>(false);
-  const inputClasses = 
-    `input appearance-none bg-indigo-950 block border-4 h-12 px-4 peer rounded-full text-sm w-full focus:border-indigo-400 focus:outline-none focus:ring-0
+  const inputClasses = `input appearance-none bg-indigo-950 block border-4 h-12 px-4 peer rounded-full text-sm w-full focus:border-indigo-400 focus:outline-none focus:ring-0
     ${
       disabled
         ? 'border-indigo-900 text-indigo-400'
         : 'border-indigo-800 text-indigo-300'
     }`;
 
-  const labelClasses =
-    `absolute bg-transparent duration-300 mx-2 origin-[0] px-2 scale-75 text-xs top-2 left-2 transform -translate-y-[0.8rem] z-20 peer-focus:scale-75 peer-focus:top-2 peer-focus:left-4 peer-focus:-translate-y-[0.8rem] peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2
+  const labelClasses = `absolute bg-transparent duration-300 mx-2 origin-[0] px-2 scale-75 text-xs top-2 left-2 transform -translate-y-[0.8rem] z-20 peer-focus:scale-75 peer-focus:top-2 peer-focus:left-4 peer-focus:-translate-y-[0.8rem] peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2
     ${
       disabled
         ? 'peer-focus:text-indigo-900 text-indigo-400'
@@ -39,8 +27,8 @@ const Input: React.FC<InputProps> = ({
     }`;
 
   const borderLeftClasses = `absolute bg-indigo-800 rounded-full h-[0.28rem] w-[0.28rem] top-0 left-[1.25rem] z-20 peer-focus:bg-indigo-400`;
-  const borderCenterClasses = `absolute bg-indigo-950 duration-300 h-[0.28rem] w-0 top-0 left-[1.3rem] z-10 peer-focus:w-[8.91rem]`;
-  const borderRightClasses = `absolute bg-indigo-800 duration-300 rounded-full h-[0.28rem] w-[0.28rem] top-0 left-[1.25rem] z-20 peer-focus:left-[10rem] peer-focus:bg-indigo-400`;
+  const borderCenterClasses = `absolute bg-indigo-950 duration-300 h-[0.28rem] w-0 top-0 left-[1.3rem] z-10 peer-focus:w-[5rem]`;
+  const borderRightClasses = `absolute bg-indigo-800 duration-300 rounded-full h-[0.28rem] w-[0.28rem] top-0 left-[1.25rem] z-20 peer-focus:left-[6.25rem] peer-focus:bg-indigo-400`;
 
   return (
     <div className='flex flex-col w-1/4'>

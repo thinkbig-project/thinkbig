@@ -1,3 +1,3 @@
-export type TEmojiParallaxContainer = {
+export type EmojiParallaxContainer = {
   children: React.ReactNode;
 };

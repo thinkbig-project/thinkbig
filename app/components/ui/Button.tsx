@@ -1,5 +1,3 @@
-
-
 import Link from 'next/link';
 
 import { ButtonProps } from '@/types'; // type/interface props

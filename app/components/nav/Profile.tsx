@@ -1,10 +1,12 @@
 'use client';
+import { useState } from 'react';
 import { signOut } from 'next-auth/react';
 import Avatar from '@/app/components/ui/Avatar';
 import type { ProfileProps } from '@/types';
-import Image from 'next/image';
 
 const Profile: React.FC<ProfileProps> = ({ src, user }) => {
+  const [isShown, setIsShown] = useState(false);
+
   const handleClick = () => {
     signOut({
       callbackUrl: '/',
@@ -13,14 +15,15 @@ const Profile: React.FC<ProfileProps> = ({ src, user }) => {
 
   return (
     <>
-      <div className='content-start flex flex-col gap-4 h-full'>
-        {/* nav buttons here */}
-      </div>
-      <div>
+
+      <div
+        onMouseEnter={() => setIsShown(true)}
+        onMouseLeave={() => setIsShown(false)}
+      >
         <Avatar
-          className='h-14 w-14'
-          src='https://cdn.discordapp.com/avatars/297864485996068864/86eff9813511d8173f0f0ff9d16ac340.png'
-          user='Jon Snow'
+          className='border-4 border-transparent h-14 w-14 rounded-full hover:border-4 hover:border-indigo-600'
+          src={src}
+          user={user}
           onClick={handleClick}
         />
       </div>

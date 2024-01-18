@@ -3,10 +3,9 @@ import Image from 'next/image';
 const SideNav: React.FC = () => {
   return (
     <div className='bg-neutral-950 flex flex-col h-screen items-center justify-between py-4 sticky text-white top-0 w-20'>
-      <div>
-        <hr className='border-gray-700 my-4' />
+      <div className='content-start flex flex-col gap-4 h-full'>
+        {/* nav buttons here */}
       </div>
-      <div className='content-start flex flex-col gap-4 h-full'></div>
       <div>
         <Image
           className={`aspect-square rounded-full hover:brightness-110`}

@@ -8,6 +8,7 @@ import { DropdownProps } from './DropdownProps';
 import { EmojiParallaxContainer } from './EmojiParallaxContainerProps';
 import { InputProps } from './InputProps';
 import { IssueIconProps } from './IssueIconProps';
+import { ProfileProps } from './ProfileProps';
 import { TagProps } from './TagProps';
 
 // re-export types and interfaces
@@ -22,5 +23,6 @@ export type {
   EmojiParallaxContainer,
   InputProps,
   IssueIconProps,
+  ProfileProps,
   TagProps,
 };

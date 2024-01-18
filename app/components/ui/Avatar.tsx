@@ -1,16 +1,15 @@
 import Image from 'next/image';
+import type { AvatarProps } from '@/types';
 
-import { AvatarProps } from '@/types'; // type/interface props
-
-export default function Avatar({ avatar, className, user }: AvatarProps) {
+export default function Avatar({ src, className, user, onClick }: AvatarProps) {
   return (
-    <div className={`aspect-square h-12 w-12 ${className}`}>
+    <div className={`relative ${className}`}>
       <Image
-        className={`aspect-square rounded-full hover:brightness-110`}
-        src={avatar}
+        className={`rounded-full hover:brightness-110`}
+        src={src}
         alt={`Profile picture of the ${user}.`}
-        height={48}
-        width={48}
+        fill={true}
+        onClick={onClick}
       />
     </div>
   );

@@ -15,7 +15,7 @@ const Profile: React.FC<ProfileProps> = ({ src, user }) => {
 
   return (
     <>
-
+      {isShown && <p className='relative text-sm'>Sign Out</p>}
       <div
         onMouseEnter={() => setIsShown(true)}
         onMouseLeave={() => setIsShown(false)}

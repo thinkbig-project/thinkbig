@@ -3,8 +3,7 @@ import Avatar from '@/app/components/ui/Avatar';
 import CrudButton from '@/app/components/ui/CrudButton';
 import IssueIcon from '@/app/components/ui/IssueIcon';
 
-import { CardProps, Matches } from "@/types"; // type/interface props
-
+import { CardProps, Matches } from '@/types'; // type/interface props
 
 const Card: React.FC<CardProps> = ({ type, title, desc, matches }) => {
   const [expanded, setExpanded] = useState(true);
@@ -32,10 +31,11 @@ const Card: React.FC<CardProps> = ({ type, title, desc, matches }) => {
             <h2 className='text-2xl w-full'>{title}</h2>
           </div>
           <p
-            className={`bg-gradient-to-r from-indigo-900 p-2 rounded-lg w-full ${expanded
-              ? 'bg-indigo-900'
-              : 'bg-gradient-to-r from-indigo-900 truncate'
-              }`}
+            className={`bg-gradient-to-r from-indigo-900 p-2 rounded-lg w-full ${
+              expanded
+                ? 'bg-indigo-900'
+                : 'bg-gradient-to-r from-indigo-900 truncate'
+            }`}
           >
             {desc}
           </p>
@@ -46,14 +46,15 @@ const Card: React.FC<CardProps> = ({ type, title, desc, matches }) => {
         >
           <div
             id='avatar-placeholder'
-            className={`flex flex-row justify-end w-full ${expanded ? 'h-full' : null
-              }`}
+            className={`flex flex-row justify-end w-full ${
+              expanded ? 'h-full' : null
+            }`}
           >
             {matches.map((match) => {
               return (
                 <Avatar
                   key={match.id}
-                  avatar={match.avatar}
+                  src={match.avatar}
                   className={`z-10 -ml-[1.5rem] border-[0.175rem] border-indigo-950 rounded-full`}
                   user='user'
                 />

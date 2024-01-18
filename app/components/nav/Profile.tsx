@@ -1,9 +1,10 @@
 'use client';
 import { signOut } from 'next-auth/react';
 import Avatar from '@/app/components/ui/Avatar';
+import type { ProfileProps } from '@/types';
 import Image from 'next/image';
 
-const Profile: React.FC = () => {
+const Profile: React.FC<ProfileProps> = ({ src, user }) => {
   const handleClick = () => {
     signOut({
       callbackUrl: '/',
@@ -11,7 +12,7 @@ const Profile: React.FC = () => {
   };
 
   return (
-    <div className='bg-slate-900 flex flex-col h-screen items-center justify-between py-4 sticky text-white top-0 w-20'>
+    <>
       <div className='content-start flex flex-col gap-4 h-full'>
         {/* nav buttons here */}
       </div>
@@ -22,7 +23,7 @@ const Profile: React.FC = () => {
           onClick={handleClick}
         />
       </div>
-    </div>
+    </>
   );
 };
 

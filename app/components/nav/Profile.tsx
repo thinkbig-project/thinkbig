@@ -18,6 +18,7 @@ const Profile: React.FC<ProfileProps> = ({ src, user }) => {
       </div>
       <div>
         <Avatar
+          className='h-14 w-14'
           src='https://cdn.discordapp.com/avatars/297864485996068864/86eff9813511d8173f0f0ff9d16ac340.png'
           user='Jon Snow'
           onClick={handleClick}

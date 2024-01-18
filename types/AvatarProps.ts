@@ -1,5 +1,6 @@
 export interface AvatarProps {
-    avatar: string;
-    className?: string;
-    user: string;
+  src: string;
+  className?: string;
+  user: string;
+  onClick?: () => void;
 }

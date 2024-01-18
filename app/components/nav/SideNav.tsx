@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Profile from '@/app/components/nav/Profile';
 
 const SideNav: React.FC = () => {
   return (
@@ -7,13 +7,7 @@ const SideNav: React.FC = () => {
         {/* nav buttons here */}
       </div>
       <div>
-        <Image
-          className={`aspect-square rounded-full hover:brightness-110`}
-          src='https://cdn.discordapp.com/avatars/297864485996068864/86eff9813511d8173f0f0ff9d16ac340.png'
-          alt='User Name'
-          height={56}
-          width={56}
-        />
+        <Profile />
       </div>
     </div>
   );

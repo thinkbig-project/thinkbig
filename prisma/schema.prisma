@@ -10,47 +10,51 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Account {
-  id                String  @id @map("_id")
-  userId            String
-  type              String
-  provider          String
-  providerAccountId String
-  refresh_token     String?
-  access_token      String?
-  expires_at        Int?
-  token_type        String?
-  scope             String?
-  id_token          String?
-  session_state     String?
-  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@unique([provider, providerAccountId])
-}
-
-model Session {
-  id           String   @id @map("_id")
-  sessionToken String   @unique
-  userId       String
-  expires      DateTime
-  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-}
-
 model User {
   name      String?
   email     String    @unique
   image     String?
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
-  session   Session[]
-  account   Account[]
+  issues    Issue[]
   id        String    @id @map("_id")
 }
 
-model VerificationToken {
-  identifier String   @id @map("_id")
-  token      String   @unique
-  expires    DateTime
-
-  @@unique([identifier, token])
+model Issue {
+  id       String     @id @map("_id")
+  userId   String
+  codeHelp CodeHelp[]
+  user     User       @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
+
+model CodeHelp {
+  id         String   @id @map("_id")
+  issueId    String
+  type       String
+  tags       String[]
+  repository String
+  files      String
+  expected   String
+  unexpected String
+  reproduce  String
+  attempted  String
+  issue      Issue    @relation(fields: [issueId], references: [id])
+}
+
+// model Account {
+//   id                String  @id @map("_id")
+//   userId            String
+//   type              String
+//   provider          String
+//   providerAccountId String
+//   refresh_token     String?
+//   access_token      String?
+//   expires_at        Int?
+//   token_type        String?
+//   scope             String?
+//   id_token          String?
+//   session_state     String?
+//   user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+//   @@unique([provider, providerAccountId])
+// }

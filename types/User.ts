@@ -1,14 +1,12 @@
-import { CodeHelp
- } from "./CodeHelp";
+import { Issue } from './';
 
 export interface User {
-  name:       String | undefined;
-  email:      String;
-  image:      String | undefined;
-  createdAt:  Date;
-  updatedAt:  Date;
-  session:    Session[];
-  account:    Account[];
-  codeHelp:   CodeHelp[] | undefined;
-  id:         String;
+  id: String;
+  name?: String | undefined;
+  email: String;
+  image?: String | undefined;
+  createdAt: Date;
+  updatedAt: Date;
+  issues: Issue[];
 }
+

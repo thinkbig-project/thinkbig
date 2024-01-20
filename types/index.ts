@@ -7,6 +7,7 @@ import { CrudButtonProps } from './CrudButtonProps';
 import { DropdownProps } from './DropdownProps';
 import { EmojiParallaxContainer } from './EmojiParallaxContainerProps';
 import { InputProps } from './InputProps';
+import { Issue } from './Issue';
 import { IssueIconProps } from './IssueIconProps';
 import { ProfileProps } from './ProfileProps';
 import { TagProps } from './TagProps';
@@ -23,6 +24,7 @@ export type {
   DropdownProps,
   EmojiParallaxContainer,
   InputProps,
+  Issue,
   IssueIconProps,
   ProfileProps,
   TagProps,

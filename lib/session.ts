@@ -12,7 +12,6 @@ export const getUserSession = async (): Promise<User> => {
     },
   });
   if (!authUserSession)
-    console.error('There was a problem authorizing the session.');
-  // throw new Error('There was a problem authorizing the session.');
+    console.error('Authorized session does not exist.');
   return authUserSession?.user;
 };

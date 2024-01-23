@@ -1,16 +1,10 @@
-/** Resources:
- *  - https://nextjs.org/docs/app/building-your-application/routing/defining-routes
- *  - https://nextjs.org/docs/api-routes/introduction
- *  - https://www.prisma.io/docs/orm/prisma-schema
- */
-
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 
 export const GET = async (request: Request) => {
-  console.log('** GET /users/:id');
-  const user = await prisma.user.findFirst();
-  return NextResponse.json({ message: 'ok', status: 200, data: user });
+  console.log('** GET /users/:id/issues/:id');
+  const issue = await prisma.issue.findFirst();
+  return NextResponse.json({ message: 'ok', status: 200, data: issue });
 };
 
 export const PATCH = async (
@@ -21,12 +15,12 @@ export const PATCH = async (
     const id = params.id;
     const json = await request.json();
 
-    const user = await prisma.user.update({
+    const issue = await prisma.issue.update({
       where: { id },
       data: json,
     });
 
-    return new NextResponse(JSON.stringify(user), {
+    return new NextResponse(JSON.stringify(issue), {
       status: 201,
       headers: { 'Content-Type': 'application/json' },
     });

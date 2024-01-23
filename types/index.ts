@@ -2,7 +2,6 @@ import { AvatarProps } from './AvatarProps';
 import { ButtonProps } from './ButtonProps';
 import { CardProps, Matches } from './CardProps';
 import { CloseButtonProps } from './CloseButtonProps';
-import { CodeHelp } from './CodeHelp';
 import { CrudButtonProps } from './CrudButtonProps';
 import { DropdownProps } from './DropdownProps';
 import { EmojiParallaxContainer } from './EmojiParallaxContainerProps';
@@ -19,7 +18,6 @@ export type {
   CardProps,
   Matches,
   CloseButtonProps,
-  CodeHelp,
   CrudButtonProps,
   DropdownProps,
   EmojiParallaxContainer,

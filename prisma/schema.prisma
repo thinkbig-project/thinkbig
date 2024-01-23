@@ -12,49 +12,24 @@ datasource db {
 
 model User {
   name      String?
-  email     String    @unique
+  email     String   @unique
   image     String?
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
   issues    Issue[]
-  id        String    @id @map("_id")
+  id        String   @id @map("_id")
 }
 
 model Issue {
-  id       String     @id @map("_id")
-  userId   String
-  codeHelp CodeHelp[]
-  user     User       @relation(fields: [userId], references: [id], onDelete: Cascade)
-}
-
-model CodeHelp {
   id         String   @id @map("_id")
-  issueId    String
+  userId     String 
   type       String
   tags       String[]
-  repository String
-  files      String
-  expected   String
-  unexpected String
-  reproduce  String
-  attempted  String
-  issue      Issue    @relation(fields: [issueId], references: [id])
+  repository String?
+  files      String?
+  expected   String?
+  unexpected String?
+  reproduce  String?
+  attempted  String?
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
-
-// model Account {
-//   id                String  @id @map("_id")
-//   userId            String
-//   type              String
-//   provider          String
-//   providerAccountId String
-//   refresh_token     String?
-//   access_token      String?
-//   expires_at        Int?
-//   token_type        String?
-//   scope             String?
-//   id_token          String?
-//   session_state     String?
-//   user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-//   @@unique([provider, providerAccountId])
-// }

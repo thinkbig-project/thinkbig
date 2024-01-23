@@ -1,4 +1,3 @@
-// Import types and interfaces
 import { AvatarProps } from './AvatarProps';
 import { ButtonProps } from './ButtonProps';
 import { CardProps, Matches } from './CardProps';
@@ -7,11 +6,12 @@ import { CrudButtonProps } from './CrudButtonProps';
 import { DropdownProps } from './DropdownProps';
 import { EmojiParallaxContainer } from './EmojiParallaxContainerProps';
 import { InputProps } from './InputProps';
+import { Issue } from './Issue';
 import { IssueIconProps } from './IssueIconProps';
 import { ProfileProps } from './ProfileProps';
 import { TagProps } from './TagProps';
+import { User } from './User';
 
-// re-export types and interfaces
 export type {
   AvatarProps,
   ButtonProps,
@@ -22,7 +22,9 @@ export type {
   DropdownProps,
   EmojiParallaxContainer,
   InputProps,
+  Issue,
   IssueIconProps,
   ProfileProps,
   TagProps,
+  User,
 };

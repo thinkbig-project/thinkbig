@@ -8,7 +8,7 @@ import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 
 export const GET = async (request: Request) => {
-  console.log('** GET /users/:id');
+  console.log('** GET /users/:id/issues');
   const user = await prisma.user.findFirst();
   return NextResponse.json({ message: 'ok', status: 200, data: user });
 };

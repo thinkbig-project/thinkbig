@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 
 export const GET = async (request: Request) => {
-  console.log('** GET /users/:id/issues/:id');
+  console.log('** GET /users/:id/issues/:slug');
   const issue = await prisma.issue.findFirst();
   return NextResponse.json({ message: 'ok', status: 200, data: issue });
 };

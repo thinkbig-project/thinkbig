@@ -11,18 +11,18 @@ datasource db {
 }
 
 model User {
+  id        String   @id @map("_id")
   name      String?
   email     String   @unique
   image     String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   issues    Issue[]
-  id        String   @id @map("_id")
 }
 
 model Issue {
   id         String   @id @map("_id")
-  userId     String 
+  userId     String
   type       String
   tags       String[]
   repository String?

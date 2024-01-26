@@ -3,6 +3,38 @@ import CloseButton from './CloseButton';
 import Tag from '@/app/components/ui/Tag';
 import type { TagMenuProps } from '@/types';
 
+/** 
+ * This goes into the parent component
+ * 
+ * const tagList: TagList[] = [
+ *  'css',
+ *  'ejs',
+ *  'html',
+ *  'js',
+ *  'mongo',
+ *  'node',
+ *  'react',
+ * ];
+ *
+ * const tagTitles: string[] = [
+ *  'Cascading Style Sheets',
+ *  'Embedded JavaScript',
+ *  'HyperText Markup Language',
+ *  'JavaScript',
+ *  'MongoDB / Mongoose',
+ *  'Node.js / Express.js',
+ *  'React.js',
+ * ];
+ * 
+ * const handleTagClick = (tag: TagList) => {
+ *   if (chosenTags.includes(tag)) {
+ *     setChosenTags(chosenTags.filter((t) => t !== tag)); // Remove the tag if it's already selected
+ *   } else {
+ *     setChosenTags([...chosenTags, tag]); // Add the tag if it's not selected
+ *   }
+ * }; 
+ */
+
 const TagMenu = ({ onClick, tagList, tagTitles, chosenTags }: TagMenuProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 

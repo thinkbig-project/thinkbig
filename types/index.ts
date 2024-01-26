@@ -9,6 +9,8 @@ import { InputProps } from './InputProps';
 import { Issue } from './Issue';
 import { IssueIconProps } from './IssueIconProps';
 import { ProfileProps } from './ProfileProps';
+import { TagList } from './TagList';
+import { TagMenuProps } from './TagMenuProps';
 import { TagProps } from './TagProps';
 import { User } from './User';
 
@@ -25,6 +27,8 @@ export type {
   Issue,
   IssueIconProps,
   ProfileProps,
+  TagList,
+  TagMenuProps,
   TagProps,
   User,
 };

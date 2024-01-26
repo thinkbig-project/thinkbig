@@ -1,3 +1,4 @@
+import { TagList } from '@/types';
 export interface TagProps {
-    tagType: "css" | "ejs" | "html" | "js" | "mongo/mongoose" | "node/express" | "react"
+  name: TagList;
 }

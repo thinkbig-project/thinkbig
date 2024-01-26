@@ -1,14 +1,11 @@
+import Image from 'next/image';
+import type { CloseButtonProps } from '@/types';
 
-import Image from "next/image";
-
-
-import { CloseButtonProps } from "@/types"; // type/interface props
-
-const CloseButton: React.FC<CloseButtonProps> = ({ onClose }) => {
+const CloseButton: React.FC<CloseButtonProps> = ({ onClick }) => {
   return (
     <button
       type='button'
-      onClick={onClose}
+      onClick={onClick}
       className='bg-indigo-400 hover:bg-indigo-300 
             rounded-full outline-0 p-1 shadow-lg'
     >

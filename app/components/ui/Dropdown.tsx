@@ -1,33 +1,49 @@
+'use client'
+
 import { useState } from 'react';
 import { DropdownProps } from '@/types';
 
-const Dropdown: React.FC<DropdownProps> = ({ error, id, label, options, onChange, value }) => {
-    const [selected, setSelected] = useState<string | null>(null);
+// Props for the Dropdown component, updated in /types .
+interface DropdownProps {
+    placeholder?: string;
+    options: string[];
+    selectedOption: string;
+    onSelectionChange: (option: string) => void;
+    id: string;
+    error?: string;
+}
+
+const Dropdown: React.FC<DropdownProps> = ({ placeholder, options, selectedOption, onSelectionChange, id, error }) => {
+
     const [dropdown, setDropdown] = useState<boolean | null>(null);
 
-    const handleClick = () => {
+    const openDropdown = () => {
         setDropdown(!dropdown);
     };
 
     const handleItemClick = (option: string) => {
-        setSelected(option);
-        setDropdown(!dropdown);
-        onChange();
+        onSelectionChange(option);
+        setDropdown(false);
     };
 
     return (
-        <div className='border-4 rounded-lg border-indigo-400 px-4 
-                py-2 w-1/4 bg-inherit hover:border-indigo-300
-                '
+        <div className='flex justify-between border-4 rounded-3xl border-indigo-400 px-4 
+        py-2 w-1/4 bg-inherit hover:border-indigo-300 
+        '
         >
-            <label htmlFor={id}>{label}</label>
-            <button type="button" id={id} onClick={handleClick}>
-                {selected || 'select an assignment'}
+            <div>
+            {(!selectedOption || selectedOption === '') && placeholder &&
+                <label htmlFor={id}>{placeholder}</label>
+            }
+            <button type="button" id={id} onClick={openDropdown}>
+                {selectedOption}
             </button>
+            
+
             {dropdown && (
                 <ul>
-                    {options.map((option, i) => (
-                        <li key={i} onClick={() => handleItemClick(option)}
+                    {options.map((option) => (
+                        <li key={option} onClick={() => handleItemClick(option)}
                             className='hover:bg-indigo-300 hover:rounded-lg 
                             hover:px-2 hover:w-fit'
                         >
@@ -37,7 +53,13 @@ const Dropdown: React.FC<DropdownProps> = ({ error, id, label, options, onChange
                 </ul>
             )}
             {error && <span>{error}</span>}
-        </div>
+            </div>
+            <div>
+            <span>{String.fromCharCode(8595)}</span>
+            </div>
+         </div>
+                     
+
     );
 };
 

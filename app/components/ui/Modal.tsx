@@ -1,3 +1,5 @@
+'use client'
+
 interface ModalProps {
   title: string;
   onClose?: () => void;
@@ -12,7 +14,7 @@ const Modal: React.FC<ModalProps> = ({ title, onClose, children }) => {
         {/* modal header */}
         <div className='flex justify-between mb-8 text-xl'>
           <h2>{title}</h2>
-          <button onClick={onClose}>Close</button>
+          <button onClick={onClose}>{String.fromCharCode(0x00D7)}</button>
         </div>
         {/* divider */}
         <div className='border-b-2 border-gray-600 mb-8'></div>

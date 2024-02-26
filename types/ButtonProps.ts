@@ -1,4 +1,5 @@
 export interface ButtonProps {
     title: string;
-    href: string;
+    href?: string;
+    type?: `button` | `submit` | `reset`;
 }

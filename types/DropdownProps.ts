@@ -1,8 +1,9 @@
-export type DropdownProps = {
-    error: string;
-    id: string;
-    label: string;
+export interface DropdownProps {
+    placeholder?: string;
     options: string[];
-    onChange: () => void;
-    value: string;
-};
+    selectedOption: string;
+    onSelectionChange: (option: string) => void;
+    id: string;
+    error?: string;
+}
+

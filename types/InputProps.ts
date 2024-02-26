@@ -7,4 +7,6 @@ export type InputProps = {
   readOnly: boolean;
   type: string;
   value: string;
+  size?: 'small' | 'medium' | 'large';
+  name: string
 };

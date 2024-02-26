@@ -3,16 +3,6 @@
 import { useState } from 'react';
 import { DropdownProps } from '@/types';
 
-// Props for the Dropdown component, updated in /types .
-interface DropdownProps {
-    placeholder?: string;
-    options: string[];
-    selectedOption: string;
-    onSelectionChange: (option: string) => void;
-    id: string;
-    error?: string;
-}
-
 const Dropdown: React.FC<DropdownProps> = ({ placeholder, options, selectedOption, onSelectionChange, id, error }) => {
 
     const [dropdown, setDropdown] = useState<boolean | null>(null);
